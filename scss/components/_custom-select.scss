@@ -3,6 +3,10 @@
   position: relative;
   font-size: 14px;
   margin-left: 12px;
+
+  @include media-breakpoint-down(md){
+    margin-left: 0;
+  }
 }
 
 .custom-select select {
@@ -35,6 +39,9 @@
   cursor: pointer;
   user-select: none;
   transition: color 0.4s;
+  @include media-breakpoint-down(md){
+    padding: 7px 0;
+  }
 }
 .select-items:hover div,.select-selected:hover {
   color: lighten(#ad965b, 20%);

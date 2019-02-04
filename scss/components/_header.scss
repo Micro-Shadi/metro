@@ -6,9 +6,24 @@ html, body {
 .header {
   padding-top: 20px;
   height: 100%;
+  &:after {
+    @extend %pseudo-content;
+    background: linear-gradient(#000, transparent);
+    display: none;
+  }
+  @include media-breakpoint-down(lg){
+    &:after {
+      display: block;
+    }
+  }
 
   .navbar {
+    position: relative;
     align-items: flex-start;
+    @include media-breakpoint-down(md) {
+      align-items: center;
+    }
+    z-index: 99;
   }
   .navbar-nav {
     margin-top: 20px;
@@ -75,13 +90,16 @@ html, body {
     animation: introFadeIn 1s 1s forwards;
     opacity: 0;
 
-    @include media-breakpoint-down(md) {
-      background-size: cover!important;
+    @include media-breakpoint-down(lg) {
+      background-size: contain!important;
     }
   }
   .logo-layer {
-    background-position: top!important;
+    background-position: 65% top!important;
     animation: introFadeIn 1s 1.5s forwards;
+    @include media-breakpoint-down(lg) {
+      background-position: center!important;
+    }
   }
 }
 
@@ -92,9 +110,4 @@ html, body {
   to {
     opacity: 1;
   }
-}
-
-/* navbar toggle mobile */
-.navbar-toggler-icon {
-
 }
