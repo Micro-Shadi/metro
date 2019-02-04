@@ -71,3 +71,20 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+/* Scroll reveal ////////////////////////////////////////////////////////////////////// */
+ScrollReveal().reveal('.fadeIn');
+ScrollReveal().reveal('.slideUp', {
+  distance: '80%',
+  duration: 800,
+  origin: 'bottom',
+  opacity: 0,
+  delay: 300,
+  easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+});
+ScrollReveal().reveal('.lineSlide', {
+  delay: 300,
+  beforeReveal: function onEnter (el) {
+  el.classList.add('active')
+  }
+});

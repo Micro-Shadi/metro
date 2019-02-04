@@ -20,10 +20,16 @@ html, body {
   .navbar {
     position: relative;
     align-items: flex-start;
+    top: -20px;
+    opacity: 0;
+    animation: navbarFadeIn 0.75s 2.5s forwards;
     @include media-breakpoint-down(md) {
       align-items: center;
     }
     z-index: 99;
+  }
+  .navbar-brand {
+    margin-top: 20px;
   }
   .navbar-nav {
     margin-top: 20px;
@@ -87,7 +93,7 @@ html, body {
     top: 0;
     background-position: bottom!important;
     background-repeat: no-repeat!important;
-    animation: introFadeIn 1s 1s forwards;
+    animation: introFadeIn 1.5s 1.5s forwards;
     opacity: 0;
 
     @include media-breakpoint-down(lg) {
@@ -96,7 +102,7 @@ html, body {
   }
   .logo-layer {
     background-position: 65% top!important;
-    animation: introFadeIn 1s 1.5s forwards;
+    animation: introFadeIn 0.75s 2.5s forwards;
     @include media-breakpoint-down(lg) {
       background-position: center!important;
     }
@@ -106,8 +112,21 @@ html, body {
 @keyframes introFadeIn {
   from {
     opacity: 0;
+    top: 40px;
   }
   to {
     opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes navbarFadeIn {
+  from {
+    opacity: 0;
+    top: -20px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
   }
 }
