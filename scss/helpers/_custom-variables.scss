@@ -1,0 +1,111 @@
+/* General variable styles */
+$theme-colors: (
+  "primary": #ad965b,
+  "secondary": #777676
+);
+$enable-rounded: true;
+
+
+/* Fonts & typograpthy */
+$font-size-base: 1rem;
+$font-family-base: proximaSemiBold;
+$header-font: kionaSemiBold;
+$line-height-base: 1.4;
+$border-radius-base: 10px;
+$text-color: theme-color('secondary');
+
+
+$headings-font-family: proximaSemiBold;
+$h1-font-size: 28px;
+$h2-font-size: 26px;
+$h3-font-size: 24px;
+$h4-font-size: 22px;
+$h5-font-size: 20px;
+$headings-font-weight: normal;
+$headings-line-height: 1.3;
+$headings-color: theme-color('primary');
+$headings-margin-bottom: 0;
+
+
+/* Nav */
+$nav-link-padding-y: 12px;;
+$nav-link-padding-x: 16px;
+
+$navbar-nav-link-padding-x: .6rem;
+
+
+
+/* Inputs
+$input-bg: #ebebeb;
+$input-color: #8a8a8a;
+
+$input-height: auto;
+
+$input-padding-y: 15px;
+$input-padding-x: 15px;
+
+$input-border-width: 1px;
+$input-border-color: transparent;
+$input-focus-border-color: #d1d1d1;
+
+$input-plaintext-color: #acacac;
+$input-placeholder-color: #acacac;
+$input-focus-color: #333;
+
+$custom-select-padding-y: 15px; // 15px
+$custom-select-padding-x: 15px; // 15px
+$custom-select-height: auto;
+$custom-select-font-size-sm: 11px;
+$custom-select-font-size-lg: 11px;
+
+$input-transition: all .25s ease-in-out;
+*/
+
+/* Buttons */
+$btn-padding-y: 12px;
+$btn-padding-x: 60px;
+$btn-font-weight: normal;
+$btn-border-width: 0;
+$btn-border-radius: 0;
+
+
+/* Adding more spacers to $spacers map */
+// location of original code: bootstrap/scss/_variables.scss - line:131
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),     // 1rem(16px) * 0.25 = 4px
+    2: ($spacer * .5),      // 8px
+    3: ($spacer * .75),     // 12px
+    4: $spacer,             // 16px
+    5: ($spacer * 1.25),    // 20px
+    6: ($spacer * 1.5),     // 24px
+    7: ($spacer * 1.75),    // 28px
+    8: ($spacer * 2),       // 32px
+    9: ($spacer * 2.25),    // 36px
+    10: ($spacer * 2.5),    // 40px
+    11: ($spacer * 2.75),   // 44px
+    12: ($spacer * 3),      // 48px
+    24: ($spacer * 6)       // 96px
+  ),
+  $spacers
+);
+
+
+/* adding more sizes to $sizes map*/
+// location of original code: bootstrap/scss/_variables.scss - line:146
+$sizes: () !default;
+$sizes: map-merge(
+  (
+    20: 20%,
+    25: 25%,
+    33: 33.33%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto
+  ),
+  $sizes
+);

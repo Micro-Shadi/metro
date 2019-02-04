@@ -1,0 +1,32 @@
+.btn-primary {
+  background: #030000;
+  color: #c9af6a;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+
+  .right-arrow {
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    transition: width 0.4s, opacity 0.4s;
+  }
+  span.fa {
+    display: inline;
+    font-size: 12px;
+  }
+
+  &:hover {
+    background: lighten(#030000, 3%);
+    color: #c9af6a;
+
+    .right-arrow {
+      width: 10px;
+      opacity: 1;
+    }
+  }
+}
+
+.btn-primary.btn-primary-white {
+  background: #fff;
+  color: #000;
+}

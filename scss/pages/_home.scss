@@ -1,0 +1,437 @@
+.opening-time {
+  border-bottom: 2px solid #231f20;
+  .welcome p{
+    font-size: 32px;
+    color: theme-color('primary');
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  .open-time {
+    p {
+      font-size: 22px;
+      color: theme-color('primary');
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    p.time {
+      color: theme-color('secondary');
+    }
+  }
+}
+
+/* View all stores */
+.all-stores {
+  .stores-list {
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    li a {
+      display: block;
+      font-size: 12px;
+      color: #c1bbbb;
+      text-decoration: none;
+      padding: 12px 18px;
+      border: 1px solid transparent;
+      transition: border 0.3s, color 0.3s;
+
+      &:hover {
+        color: #c9af6a;
+        border-color: #8d7a50;
+      }
+    }
+  }
+}
+
+/* brands slider */
+.brands-slider {
+  .owl-prev {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    display: block !important;
+    outline: none;
+    transition: opacity 0.4s;
+    span {
+      font-size: 45px;
+      color: #020302;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .owl-next {
+      width: 15px;
+      height: 100px;
+      position: absolute;
+      top: 15%;
+      right: 0;
+      display: block !important;
+      outline: none;
+      transition: opacity 0.4s;
+      span {
+        font-size: 45px;
+        color: #020302;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+  }
+}
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+  display: block;
+}
+.owl-carousel .owl-item img {
+  width: auto;
+  max-width: 100%;
+}
+
+/* Discover */
+.discover {
+  h2 {
+    font-size: 32px;
+    letter-spacing: 4px;
+    color: theme-color('primary');
+  }
+
+  .discover-item {
+    position: relative;
+    background-size: cover!important;
+    background-position: center!important;
+    width: 50%;
+    height: 225px;
+    float: left;
+    text-decoration: none;
+    overflow: hidden;
+
+    &:after {
+      @extend %pseudo-content;
+      background: linear-gradient(45deg, rgba(0, 0, 0, 1) 10%, transparent);
+      opacity: 0.9;
+      transition: opacity 1s;
+    }
+
+    .bg-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: transform 3s;
+    }
+    .item-text {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 70px;
+      top: 50px;
+      transition: all 0.35s;
+      h3 {
+        font-size: 50px;
+        letter-spacing: 4px;
+        color: #fff;
+      }
+      p.sub-text {
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+      p.parag {
+        display: block;
+        color: #fff;
+        font: 12px proximaReg;
+        letter-spacing: normal;
+        margin-top: 10px;
+        line-height: 20px;
+        opacity: 0;
+        transition: all 0.35s;
+      }
+    }
+
+    // hover effects
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+      .bg-image {
+        transform: scale(1.1);
+      }
+      .item-text p.parag {
+        opacity: 1;
+      }
+      .item-text {
+        top: 0;
+      }
+    }
+  }
+  .discover-item:first-child {
+    height: 450px;
+    .item-text {
+      h3 {
+        font-size: 65px;
+      }
+      justify-content: flex-end;
+      padding: 50px;
+    }
+  }
+}
+
+/* Centre infos & services */
+.info-services {
+  h2 {
+    font-size: 32px;
+    letter-spacing: 4px;
+    color: theme-color('primary');
+  }
+  p {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 22px;
+  }
+  .opening-hours {
+    border: 1px solid theme-color('primary');
+    color: theme-color('primary');
+    text-transform: uppercase;
+    font-family: proximaBold;
+    letter-spacing: 3px;
+    padding: 15px 25px;
+    text-align: center;
+  }
+  ul li p {
+    text-align: right;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 35px;
+  }
+}
+
+/* metropole monaco */
+.metropole-monaco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../images/metropole-monaco-bg.jpg') fixed;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+
+  h2 {
+    position: relative;
+    font-size: 32px;
+    letter-spacing: 4px;
+    color: theme-color('primary');
+    margin-top: -150px;
+  }
+
+  p {
+    font-family: madeCanvasBlack;
+    font-size: 60px;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+}
+
+/* upcoming events */
+.upcoming-events {
+  position: relative;
+  margin-top: -140px;
+  h2 {
+    font-size: 32px;
+    letter-spacing: 4px;
+    color: theme-color('primary');
+  }
+  .event-img {
+    position: relative;
+    background-size: cover!important;
+    background-position: center!important;
+    height: 340px;
+
+    &:after {
+      @extend %pseudo-content;
+      background: #8d7a50;
+      opacity: 0;
+      transition: all 0.45s;
+      @supports (mix-blend-mode: multiply) {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+  .event-text {
+    background: #231f20;
+
+    h3 {
+      font: 15px proximaReg;
+      letter-spacing: 2px;
+      color: #fff;
+      padding: 0 25px;
+    }
+    p {
+      font: 12px proximaReg;
+      letter-spacing: 2px;
+      padding: 18px;
+      width: 180px;
+      text-align: center;
+      background: #8d7a50;
+      color: #fff;
+      text-transform: uppercase;
+      transition: background 0.35s;
+
+      span {
+        position: relative;
+        left: 0;
+        font-size: 9px;
+        position: relative;
+        bottom: 1px;
+        transition: left 0.35s;
+      }
+    }
+  }
+
+  .event {
+    text-decoration: none;
+
+    &:hover {
+      .event-img:after {
+        opacity: 0.3;
+        @supports (mix-blend-mode: multiply) {
+          opacity: 0.8;
+        }
+      }
+      .event-text p:hover{
+        background: lighten(#8d7a50, 10%);
+
+        span {
+          left: 5px;
+        }
+      }
+    }
+  }
+}
+
+/* find metropole */
+.find-metropole {
+  h2 {
+    font-size: 32px;
+    letter-spacing: 4px;
+    color: theme-color('primary');
+  }
+  .address, .parking {
+    span {
+      font-size: 18px;
+      color: #1d1d1b;
+      margin-bottom: 15px;
+    }
+    p.head {
+      color: theme-color('primary');
+      font-size: 20px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+  }
+
+  .map {
+    width: 100%;
+    height: 390px;
+  }
+}
+
+.footer {
+  background: #030000;
+  padding-top: 120px;
+  padding-bottom: 30px;
+
+  .links {
+    a {
+      display: block;
+      font-family: proximaReg;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+  }
+
+  .address {
+    p.head {
+      color: #87744c;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-top: 0;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    a {
+      color: #fff;
+    }
+  }
+
+  .newsletter {
+    p.head {
+      color: #87744c;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-top: 0;
+    }
+    p {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #777676;
+    }
+
+    input[type="text"] {
+      display: block;
+      box-sizing: border-box;
+      background: #fff;
+      border: none;
+      font: 9px proximaReg;
+      color: #777676;
+      width: 100%;
+      padding: 15px 25px;
+      font-style: italic;
+      margin-top: 10px;
+    }
+    input[type="submit"] {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      border: none;
+      padding: 15px;
+      background: #87744c;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 3px;
+      cursor: pointer;
+    }
+  }
+
+  .copy-rights {
+    .text-left p{
+      color: #777676;
+      font-size: 12px;
+    }
+    .text-right p{
+      color: #777676;
+      font-size: 12px;
+
+      a {
+        color: #c9af6a;
+        text-decoration: underline;
+      }
+    }
+  }
+}

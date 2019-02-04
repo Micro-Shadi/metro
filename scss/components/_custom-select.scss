@@ -1,0 +1,59 @@
+// custom select styles
+.custom-select {
+  position: relative;
+  font-size: 14px;
+  margin-left: 12px;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: none;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: relative;
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  content: "\f077";
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ad965b;
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.4s;
+}
+.select-items:hover div,.select-selected:hover {
+  color: lighten(#ad965b, 20%);
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: 000;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
