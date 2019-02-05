@@ -5,13 +5,32 @@
 
   .links {
     a {
-      display: block;
+      position: relative;
+      display: inline-block;
       font-family: proximaReg;
       text-transform: uppercase;
       font-size: 14px;
       letter-spacing: 1.5px;
       color: #fff;
       margin-bottom: 20px;
+      text-decoration: none;
+      &:after{
+        position: absolute;
+        display: block;
+        content: '';
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: -1.5px;
+        background: theme-color('primary');
+        transition: width 0.45s;
+      }
+      &:hover {
+        border-color: #020302;
+        &:after {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -30,6 +49,7 @@
       font-size: 12px;
       text-transform: uppercase;
       color: #fff;
+      line-height: 20px;
     }
     a {
       color: #fff;
@@ -63,6 +83,12 @@
       padding: 15px 25px;
       font-style: italic;
       margin-top: 10px;
+      transition: all 0.45s;
+
+      &:focus {
+        font-style: normal;
+        font-size: 11px;
+      }
     }
     input[type="submit"] {
       display: block;
@@ -77,6 +103,11 @@
       text-transform: uppercase;
       margin-top: 3px;
       cursor: pointer;
+      transition: all 0.45s;
+
+      &:hover {
+        background: lighten(theme-color('primary'), 2.5%);
+      }
     }
   }
 

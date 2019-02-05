@@ -6,16 +6,7 @@ html, body {
 .header {
   padding-top: 20px;
   height: 100%;
-  &:after {
-    @extend %pseudo-content;
-    background: linear-gradient(#000, transparent);
-    display: none;
-  }
-  @include media-breakpoint-down(lg){
-    &:after {
-      display: block;
-    }
-  }
+
 
   .navbar {
     position: relative;
@@ -30,6 +21,10 @@ html, body {
   }
   .navbar-brand {
     margin-top: 20px;
+
+    @include media-breakpoint-down(md){
+      margin-top: 10px;
+    }
   }
   .navbar-nav {
     margin-top: 20px;
@@ -37,6 +32,9 @@ html, body {
 
   .nav-item {
     position: relative;
+    @include media-breakpoint-down(md){
+      padding-left: 13px;
+    }
   }
   .nav-item:after {
     position: absolute;
@@ -47,6 +45,9 @@ html, body {
     background: #777676;
     width: 4px;
     height: 1px;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
   .nav-item:last-child:after {
     display: none;
@@ -62,6 +63,9 @@ html, body {
     letter-spacing: 1.5px;
     transition: color 0.4s;
     &:hover {
+      color: #fff;
+    }
+    @include media-breakpoint-down(md){
       color: #fff;
     }
   }

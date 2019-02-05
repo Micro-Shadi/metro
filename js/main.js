@@ -73,11 +73,28 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
 /* Scroll reveal ////////////////////////////////////////////////////////////////////// */
-ScrollReveal().reveal('.fadeIn');
+ScrollReveal().reveal('.fadeIn', {interval: 150});
 ScrollReveal().reveal('.slideUp', {
+  distance: '50px',
+  duration: 1000,
+  origin: 'bottom',
+  opacity: 0,
+  delay: 300,
+  interval: 150,
+  easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+});
+ScrollReveal().reveal('.slideLeft', {
+  distance: '30px',
+  duration: 1000,
+  origin: 'left',
+  opacity: 0,
+  delay: 300,
+  easing: 'cubic-bezier(0.19, 1, 0.22, 1)'
+});
+ScrollReveal().reveal('.slideRight', {
   distance: '80%',
   duration: 800,
-  origin: 'bottom',
+  origin: 'right',
   opacity: 0,
   delay: 300,
   easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
