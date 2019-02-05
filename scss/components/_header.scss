@@ -104,9 +104,14 @@ html, body {
       background-size: contain!important;
     }
   }
+  .girl-layer {
+    margin-top: 30px;
+  }
   .logo-layer {
     background-position: 65% top!important;
     animation: introFadeIn 0.75s 2.5s forwards;
+    padding-bottom: 500px;
+    padding-top: 500px;
     @include media-breakpoint-down(lg) {
       background-position: center!important;
     }

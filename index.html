@@ -58,8 +58,8 @@
   <!-- intro parallax -->
   <div class="intro">
     <div class="intro-layers" id="scene">
-      <div class="layer logo-layer" data-depth="0.3" style="background: url('images/intro-img2.png');"></div>
-      <div class="layer" data-depth="0.15" style="background: url('images/intro-img1.png');"></div>
+      <div class="layer logo-layer" data-depth="0.40" style="background: url('images/intro-img2.png');"></div>
+      <div class="layer girl-layer" data-depth="0.15" style="background: url('images/intro-img1.png');"></div>
     </div>
   </div>
 </div>
@@ -334,7 +334,7 @@
     var scene = document.getElementById('scene');
     var parallaxInstance = new Parallax(scene, {
       relativeInput: true,
-      limitY: 1
+      limitY: false
     });
 
     // brands slider
